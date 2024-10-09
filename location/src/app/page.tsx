@@ -4,7 +4,8 @@ import NosVehicules from "../components/nosVehicules"
 
 export default function Home() {
   return (
-    <><section className="grid grid-cols-2 w-[100vw] h-[400px] ">
+    <>
+    <section className="grid grid-cols-2 w-[100vw] h-[400px] ">
       <div className="relative">
         <svg width="740" height="400" viewBox="0 0 852 499" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 40.3321C0 40.3321 63.4934 -27.2925 120.988 12.5887C178.482 52.4699 387.46 44.667 431.955 28.6279C476.451 12.5887 741.923 24.2931 753.422 68.509C764.921 112.725 887.408 198.556 841.913 224.999C796.418 251.442 826.415 277.885 795.918 354.613C765.421 431.341 766.921 416.602 681.93 410.967C596.938 405.332 536.945 505.034 476.451 457.784C415.957 410.534 281.971 422.671 307.968 478.592C333.966 534.512 137.986 457.784 137.986 457.784L0 396.228V152.606V40.3321Z" fill="#C2CAE7" />
@@ -25,11 +26,11 @@ export default function Home() {
         <div className="flex flex-col p-14">
           <h1  className="text-[45px] text-[#ffffff] mb-6">A propos de nous</h1>
           <p className="text-[#ffffff] ">Cras volutpat risus vitae purus rutrum, at convallis neque porttitor. 
-Nulla eu elementum ante. Donec lacinia purus non accumsan molestie.  
-Pellentesque ullamcorper mauris vel tellus posuere, eget laoreet nisi  accumsan. 
-Curabitur felis quam, gravida ut nisl sit amet, mattis auctor  metus. Sed eget justo convallis, 
-molestie erat id, fermentum ligula. Nam iaculis pretium purus in varius.
- Duis tincidunt pretium dolor. Nam eget nibh ac felis fermentum aliquet vel sed mauris.</p>
+               Nulla eu elementum ante. Donec lacinia purus non accumsan molestie.  
+               Pellentesque ullamcorper mauris vel tellus posuere, eget laoreet nisi  accumsan. 
+               Curabitur felis quam, gravida ut nisl sit amet, mattis auctor  metus. Sed eget justo convallis, 
+               molestie erat id, fermentum ligula. Nam iaculis pretium purus in varius.
+                Duis tincidunt pretium dolor. Nam eget nibh ac felis fermentum aliquet vel sed mauris.</p>
         </div>
           <div className="">
           <Image src="/office.png" width={700} height={900} className="mt-4 " alt="" />
@@ -62,9 +63,7 @@ molestie erat id, fermentum ligula. Nam iaculis pretium purus in varius.
       </div>
      </div>
     </section>
-    
-    </>
-    
+    </> 
   );
 }
 
