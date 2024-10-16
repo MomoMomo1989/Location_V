@@ -8,9 +8,9 @@ return <>
         <Image src="/voiture.png" width={25} height={25} alt="" className="h-[26px] w-[26px]"/>
         </div>
         
-        <Link href="/garage" className="ml-2 mr-4 text-[#ffffff] hover:text-[#bbaeae] "><a >Acceuil</a> </Link>
+        <Link href="/" className="ml-2 mr-4 text-[#ffffff] hover:text-[#bbaeae] ">Acceuil </Link>
         <Link href="" className="ml-2 mr-4 text-[#ffffff] hover:text-[#bbaeae] ">A propos</Link>
-        <Link href="" className="ml-2 mr-4 text-[#ffffff] hover:text-[#bbaeae] ">Notre garage</Link>
+        <Link href="/garage" className="ml-2 mr-4 text-[#ffffff] hover:text-[#bbaeae] ">Notre garage</Link>
         <Link href="" className="ml-2 mr-4 text-[#ffffff] hover:text-[#bbaeae] ">Nos Prix</Link>
         <Link href="" className="ml-2 mr-4 text-[#ffffff] hover:text-[#bbaeae] ">Contact</Link>
         
