@@ -34,7 +34,8 @@ const [togle, setTogle] = useState(false);
 const [panier, setPanier]=useState({
   nbrJr : 0,
   prixT : 0.0,
-})
+});
+const [validationF, setValidationF] = useState(false);
 
 useEffect (()=>{
     const vehicleInfo = async ()=>{
@@ -196,10 +197,10 @@ return <>
                               </div>
                           </div>
                           <Form {...form2}>
-
-                                 <Button type="submit" className="h-9 w-[350px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] ">Valider</Button>
-                                 <Button type="submit" className="h-9 w-[350px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] ">Valider</Button>
-                          
+                           <div className="mt-4 flex justify-end">
+                                 <Button type="submit" className="h-9 w-[100px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] mr-7 ">Retour</Button>
+                                 <Button type="submit" className="h-9 w-[100px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] ">Valider</Button>
+                                 </div>
                           </Form>
                      </div>
    </div>

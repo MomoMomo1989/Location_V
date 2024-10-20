@@ -2,17 +2,21 @@
 import Image from "next/image"
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css/skyblue';
-
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 export default function nosVehicules(){
 
-
+    useEffect(()=>{
+        Aos.init({duration: 1000})
+      },[])
 
 
 
 return <>
 
 <div className="flex flex-col ">
-    <div className="h-[100px] w-[100vw] flex justify-center items-center "><h1 className="text-[30px] font-bold ">Notre garage</h1></div>
+    <div className="h-[100px] w-[100vw] flex justify-center items-center "><h1 className="text-[30px] font-bold " data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Notre garage</h1></div>
     <Splide aria-label="My Favorite Images">
         <SplideSlide>
         <div className="grid grid-cols-4 pl-[120px] ">
