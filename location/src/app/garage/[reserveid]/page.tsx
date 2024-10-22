@@ -94,6 +94,10 @@ useEffect(() => {
   }
 }, [formReserv])
 
+const retour = ()=>{
+  setTogle(!togle)
+  console.log("ca marche")
+}
 // const tes1 = ()=>{
 //   console.log(formReserv)
 // }
@@ -197,9 +201,9 @@ return <>
                               </div>
                           </div>
                           <Form {...form2}>
-                           <div className="mt-4 flex justify-end">
-                                 <Button type="submit" className="h-9 w-[100px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] mr-7 ">Retour</Button>
-                                 <Button type="submit" className="h-9 w-[100px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] ">Valider</Button>
+                                 <div className="mt-4 flex justify-end">
+                                   <Button type="submit" className="h-9 w-[100px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] mr-7 " onClick={retour}>Retour</Button>
+                                   <Button type="submit" className="h-9 w-[100px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] ">Valider</Button>
                                  </div>
                           </Form>
                      </div>
