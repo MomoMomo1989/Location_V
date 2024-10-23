@@ -36,7 +36,6 @@ const [panier, setPanier]=useState({
   prixT : 0.0,
 });
 const [validationF, setValidationF] = useState(false);
-
 useEffect (()=>{
     const vehicleInfo = async ()=>{
     const data = await fetch(`https://fakestoreapi.com/products/`);
@@ -96,7 +95,16 @@ useEffect(() => {
 
 const retour = ()=>{
   setTogle(!togle)
-  console.log("ca marche")
+}
+const attributvalchek = (e: React.ChangeEvent<HTMLInputElement>)=>{
+  setValidationF(e.target.checked)
+}
+const validationFinal = ()=>{
+  if (validationF== true) {
+    console.log("valider avec succes")
+  } else {
+    console.log("accepter la politique de ...")
+  }
 }
 // const tes1 = ()=>{
 //   console.log(formReserv)
@@ -186,7 +194,7 @@ return <>
                           }
                           <div className="flex items-center justify-start border-[1px] border-[#fff] p-3 ">
                             <div className="items-top flex space-x-2">
-                                <Checkbox id="terms1" />
+                                <Checkbox id="terms1" checked={validationF} onChange={attributvalchek} />
                                 <div className="grid gap-1.5 leading-none">
                                   <label
                                     htmlFor="terms1"
@@ -203,7 +211,7 @@ return <>
                           <Form {...form2}>
                                  <div className="mt-4 flex justify-end">
                                    <Button type="submit" className="h-9 w-[100px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] mr-7 " onClick={retour}>Retour</Button>
-                                   <Button type="submit" className="h-9 w-[100px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] ">Valider</Button>
+                                   <Button type="submit" className="h-9 w-[100px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] " onClick={validationFinal} >Valider</Button>
                                  </div>
                           </Form>
                      </div>
