@@ -1,8 +1,9 @@
 import { z } from "zod";
 
-export const formSchema = z.object({
-        DateDu: z.string().date(),
-        DateAu: z.string().date()
+export const formSchema2 = z.object({
+        acceptTerms: z.boolean().refine(val => val === true, {
+          message: "Vous devez accepter les termes et conditions"
+        }),
       });
 
-  export type formInputType = z.infer<typeof formSchema>;
+  export type formcheckbxType = z.infer<typeof formSchema2>;

@@ -1,6 +1,6 @@
 "use client";
 import {
-    Form,
+  Form,
   FormControl,
   FormDescription,
   FormField,
@@ -19,6 +19,8 @@ import { formSchema } from "../_schemas/reservation-form";
 import { formInputType } from "../_schemas/reservation-form";
 import  Valiationresult  from "../../../components/valiation-result";
 import { Checkbox } from "@/components/ui/checkbox"
+import { formcheckbxType } from "../_schemas/validation-form2";
+import { formSchema2 } from "../_schemas/validation-form2";
 
 type Props = {
     params : string
@@ -69,8 +71,8 @@ const form= useForm<formInputType>({
     resolver : zodResolver(formSchema),
     mode : "onChange",
 }) 
-const form2= useForm<formInputType>({
-  resolver : zodResolver(formSchema),
+const form2= useForm<formcheckbxType>({
+  resolver : zodResolver(formSchema2),
   mode : "onChange",
 })    
 const onSubmit = (data : formInputType )=>{
@@ -171,7 +173,7 @@ return <>
         </div>
       </form>
           </Form>
-                     </div>
+            </div>
                        <div className={`${togle ? "visible": "hidden" } "w-[100%] " `}>
                           { panier.prixT  > 0 ? 
                           (
@@ -192,7 +194,8 @@ return <>
                           ) : (<h1>chargement</h1>)
 
                           }
-                          <div className="flex items-center justify-start border-[1px] border-[#fff] p-3 ">
+                          <Form {...form2} >
+                            <div className="flex flex-col items-center justify-start border-[1px] border-[#fff] p-3 ">
                             <div className="items-top flex space-x-2">
                                 <Checkbox id="terms1" checked={validationF} onChange={attributvalchek} />
                                 <div className="grid gap-1.5 leading-none">
@@ -207,13 +210,15 @@ return <>
                                   </p>
                                 </div>
                               </div>
-                          </div>
-                          <Form {...form2}>
+                              <div>
                                  <div className="mt-4 flex justify-end">
-                                   <Button type="submit" className="h-9 w-[100px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] mr-7 " onClick={retour}>Retour</Button>
-                                   <Button type="submit" className="h-9 w-[100px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] " onClick={validationFinal} >Valider</Button>
+                                   <Button className="h-9 w-[100px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] mr-7 " onClick={retour}>Retour</Button>
+                                   <Button className="h-9 w-[100px] bg-[#C2CAE7] rounded-[10px] text-[#2c2c2c] hover:text-[#e2e2e2] " onClick={validationFinal} >Valider</Button>
                                  </div>
+                              </div>
+                              </div>
                           </Form>
+                          
                      </div>
    </div>
 </div>
