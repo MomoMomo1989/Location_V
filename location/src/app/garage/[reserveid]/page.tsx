@@ -66,7 +66,7 @@ useEffect(() => {
     }
   }, [details]);
 
-// console.log(produits)
+console.log(produits)
 const form= useForm<formInputType>({
     resolver : zodResolver(formSchema),
     mode : "onChange",
