@@ -13,12 +13,13 @@ import { Button } from "../../components/ui/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { formSchema } from "./_schemas/reservation-form-schema";
 
 
 export default function reservation(){
 
 const form= useForm({
-    resolver : zodResolver(),
+    resolver : zodResolver(formSchema),
     mode : "onChange",
 })    
 const onSubmit = ()=>{}
